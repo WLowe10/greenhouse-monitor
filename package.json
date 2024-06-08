@@ -1,0 +1,35 @@
+{
+	"name": "greenhouse-monitor",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/WLowe10/greenhouse-monitor.git"
+	},
+	"author": {
+		"name": "Wes Lowe",
+		"email": "wesley.lowe@yahoo.com"
+	},
+	"scripts": {
+		"build": "tsup ./src/main.ts --format=esm --minify",
+		"start": "node ./dist/main.js",
+		"dev": "tsx ./src/main.ts",
+		"dev:watch": "tsx watch ./src/main.ts"
+	},
+	"dependencies": {
+		"axios": "^1.7.2",
+		"chalk": "^5.3.0",
+		"node-html-parser": "^6.1.13",
+		"node-schedule": "^2.1.1",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.2",
+		"@types/node-schedule": "^2.1.7",
+		"tsup": "^8.1.0",
+		"tsx": "^4.14.0",
+		"typescript": "^5.4.5"
+	}
+}
