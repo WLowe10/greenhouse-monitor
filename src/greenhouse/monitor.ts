@@ -14,12 +14,13 @@ export type GreenhouseJob = {
 
 export class GreenhouseMonitor {
 	public async poll(companyName: string): Promise<GreenhouseJob[]> {
-		const boardURL = `${greenhouseBoardsUrl}?for=${companyName}`;
-
-		const response = await axios.get(boardURL, {
+		const response = await axios.get(greenhouseBoardsUrl, {
 			headers: {
 				"User-Agent":
 					"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+			},
+			params: {
+				for: companyName,
 			},
 		});
 
