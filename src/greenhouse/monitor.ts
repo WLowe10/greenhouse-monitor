@@ -3,10 +3,6 @@ import { parse } from "node-html-parser";
 
 const greenhouseBoardsUrl = "https://boards.greenhouse.io/embed/job_board";
 
-export type PollInput = {
-	company: string;
-};
-
 export type GreenhouseJob = {
 	id: string;
 	url: string;
